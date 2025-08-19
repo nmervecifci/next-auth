@@ -2,7 +2,7 @@
 
 import { useSession, signOut } from "next-auth/react";
 import Link from "next/link";
-import { withAuthGuard } from "./RouteGuard";
+import { withAuthGuard } from "@/components/RouteGuard";
 
 function ProfilePage() {
   const { data: session } = useSession();
@@ -146,6 +146,5 @@ function ProfilePage() {
     </main>
   );
 }
-
 
 export default withAuthGuard(ProfilePage);
